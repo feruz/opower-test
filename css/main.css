@@ -1,0 +1,226 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ACTUAL STYLES */
+html, body { height: 100%; }
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.board-wrapper {
+    margin: 30px 0px;
+    width: 100%;
+    position: relative;
+}
+.board-wrapper .player {
+    max-width: 620px;
+    margin: 20px auto;
+    padding: 0px 10vw;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.popup {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 16px 30px;
+    max-width: 350px;
+    top: 29%;
+    left: 0;
+    right: 0;
+    width: 40vw;
+    margin: 0 auto;
+}
+table.board {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    border: 2px solid black;
+    margin:auto;
+}
+table.board tr td {
+    vertical-align: middle;
+    height: 10vw;
+    width: 10vw;
+}
+
+/* FILLING THE BOARD COLORS */
+table.board tr:nth-child(odd) td:nth-child(odd), table.board tr:nth-child(even) td:nth-child(even) {
+     background: #855439;
+ }
+table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even) td:nth-child(odd) {
+    background: #ECD2C1;
+}
+
+/* SUB BOARD BLOCK */
+.sub-container {
+    max-width: 620px;
+    margin: 20px auto;
+    padding: 0px 9vw;
+}
+.sub-container .content {
+    border: 1px solid black;
+    padding-top: 15px;
+}
+.othello-board .sub-container .content {
+    border: none;
+    padding: 0px;
+}
+.sub-container .title {
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial;
+    margin: 15px 0px;
+}
+.chess-board .sub-container .content ul {
+    min-height: 65px;
+}
+.sub-container .content ul li {
+    height: 10vw;
+    width: 10vw;
+    display: inline-block;
+}
+.chess-board .sub-container .row .points {
+    display: inline-block;
+    float: left;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 15px;
+}
+.othello-board .sub-container .content .othello-points {
+    font-size: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 15px;
+}
+.othello-board .sub-container .content .othello-points.white {
+
+}
+.othello-board .sub-container .content .othello-points.black {
+    float: right;
+    background: rgb(88, 88, 88);
+    color: white;
+}
+.chess-board .sub-container .content ul li {
+    width: 20px;
+    height: 20px;
+}
+.chess-board .sub-container .content ul li .chess{
+    font-size: 20px;
+    color: black;
+}
+
+/* CHECKERS AND OTHELLO */
+.check {
+    width: 80%;
+    height: 80%;
+    border-radius: 50px;
+    /* border: 1px solid rgb(58, 58, 58); */
+    margin: auto;
+    cursor: pointer;
+}
+.check.red {
+    background: red;
+}
+.check.black {
+    background: black;
+}
+.check.white {
+    background: white;
+    border: 1px solid rgb(112, 112, 112);
+}
+
+/* CHESS */
+.chess {
+    width: 80%;
+    height: 80%;
+    /* border: 1px solid rgb(58, 58, 58); */
+    margin: auto;
+    font-size: 10vw;
+    cursor: pointer;
+}
+.chess.white {
+    color: white;
+}
+.chess.black {
+    color:black;
+}
+
+/* MEDIA */
+@media all and (min-width: 768px) {
+    table.board tr td, .sub-container .content ul li {
+        height: 77px;
+        width: 77px;
+    }
+    .chess {
+        font-size: 77px;
+    }
+    .sub-container .title {
+        font-size: 40px;
+    }
+    .board-wrapper .player {
+        font-size: 40px;
+    }
+    .chess-board .sub-container .content ul li {
+        width: 30px;
+        height: 30px;
+    }
+    .chess-board .sub-container .content ul li .chess{
+        font-size: 30px;
+    }
+    .othello-board .sub-container .content .othello-points {
+        font-size: 150px;
+    }
+    .popup {
+        font-size: 64px;
+        width: auto;
+        padding: 16px 60px;
+    }
+}
