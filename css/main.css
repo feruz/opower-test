@@ -50,6 +50,7 @@ body {
     max-width: 1024px;
     margin: 0 auto;
 }
+.clearfix { clear: both; }
 .board-wrapper {
     margin: 30px 0px;
     width: 100%;
