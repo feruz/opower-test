@@ -1,19 +1,20 @@
-The css classes.
+<b>The css classes.</b>
 
-.board-wrapper - container of the whole board set (game itself)
-.board-wrapper .player - name of the player (current turn)
-table.board - the playing board table
+<b>.board-wrapper</b> - container of the whole board set (game itself)<br>
+<b>.board-wrapper .player</b> - name of the player (current turn)<br>
+<b>table.board</b> - the playing board table
 
-table.board .row - single row of the table (tr)
-table.board #cell** - select the cell in the table (board cell), use id for performance. All cells have their unique number (matrix style), so #cell11 is the first cell in the first row, #cell35 - row 3, cell 5
+<b>table.board .row</b> - single row of the table (tr)<br>
+<b>table.board #cell**</b> - select the cell in the table (board cell), use id for performance. All cells have their unique number (matrix style), so #cell11 is the first cell in the first row, #cell35 - row 3, cell 5<br>
 
-.sub-container - the container that contains points and game progress data
-.sub-container .title - displays the content type of .sub-container
-.sub-container .content - content of the .sub-container
+<b>.sub-container</b> - the container that contains points and game progress data<br>
+<b>.sub-container .title</b> - displays the content type of .sub-container<br>
+<b>.sub-container .content</b> - content of the .sub-container<br>
 
 Each board-wrapper has its own class name (e.g chess-board for chess, othello-board for othello), so customization of a single board set is not a problem
 
-** NOTE **
+<b>** NOTE **</b>
+
 The color scheme provided in the document was really ugly (e.g board has black and white squares and the pieces are black), so I decided to use a bit different colors,
 which in my opinion are more user-friendly.
 
