@@ -141,7 +141,7 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
     padding: 15px;
 }
 .othello-board .sub-container .content .othello-points.white {
-
+    float: left;
 }
 .othello-board .sub-container .content .othello-points.black {
     float: right;
