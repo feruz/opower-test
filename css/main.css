@@ -99,11 +99,14 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
 /* SUB BOARD BLOCK */
 .sub-container {
     margin: 20px auto;
-    padding: 0px 3vw;
+    padding: 0px 6vw;
 }
 .sub-container .content {
     border: 1px solid black;
     padding-top: 15px;
+}
+.sub-container .content .row {
+    display: table-row;
 }
 .othello-board .sub-container .content {
     border: none;
@@ -124,11 +127,11 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
     display: inline-block;
 }
 .chess-board .sub-container .row .points {
-    display: inline-block;
-    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 15px;
     font-size: 35px;
     font-weight: bold;
-    margin: 15px;
 }
 .othello-board .sub-container .content .othello-points {
     font-size: 40px;
@@ -156,7 +159,7 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
 /* CHECKERS AND OTHELLO */
 .check {
     width: 80%;
-    height: 80%;
+    height: 81%;
     border-radius: 50px;
     /* border: 1px solid rgb(58, 58, 58); */
     margin: auto;
@@ -202,6 +205,9 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
     }
     .chess {
         font-size: 3vw;
+    }
+    .sub-container {
+        padding: 0px 3vw;
     }
     .sub-container .title, .board-wrapper .player {
         font-size: 3vw;
