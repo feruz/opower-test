@@ -47,19 +47,15 @@ table {
 /* ACTUAL STYLES */
 html, body { height: 100%; }
 body {
-    max-width: 1024px;
-    margin: 0 auto;
+
 }
 .clearfix { clear: both; }
 .board-wrapper {
     margin: 30px 0px;
-    width: 100%;
     position: relative;
 }
 .board-wrapper .player {
-    max-width: 620px;
     margin: 20px auto;
-    padding: 0px 10vw;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
@@ -73,7 +69,7 @@ body {
     text-align: center;
     padding: 16px 30px;
     max-width: 350px;
-    top: 29%;
+    top: 32%;
     left: 0;
     right: 0;
     width: 40vw;
@@ -102,9 +98,8 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
 
 /* SUB BOARD BLOCK */
 .sub-container {
-    max-width: 620px;
     margin: 20px auto;
-    padding: 0px 9vw;
+    padding: 0px 3vw;
 }
 .sub-container .content {
     border: 1px solid black;
@@ -150,11 +145,11 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
     color: white;
 }
 .chess-board .sub-container .content ul li {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 .chess-board .sub-container .content ul li .chess{
-    font-size: 20px;
+    font-size: 30px;
     color: black;
 }
 
@@ -176,6 +171,7 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
 .check.white {
     background: white;
     border: 1px solid rgb(112, 112, 112);
+    width: 75%;
 }
 
 /* CHESS */
@@ -196,31 +192,32 @@ table.board tr:nth-child(odd) td:nth-child(even), table.board tr:nth-child(even)
 
 /* MEDIA */
 @media all and (min-width: 768px) {
+    .board-wrapper {
+        float: left;
+        width: 32.5vw;
+    }
     table.board tr td, .sub-container .content ul li {
-        height: 77px;
-        width: 77px;
+        height: 3vw;
+        width: 3vW;
     }
     .chess {
-        font-size: 77px;
+        font-size: 3vw;
     }
-    .sub-container .title {
-        font-size: 40px;
-    }
-    .board-wrapper .player {
-        font-size: 40px;
+    .sub-container .title, .board-wrapper .player {
+        font-size: 3vw;
     }
     .chess-board .sub-container .content ul li {
-        width: 30px;
-        height: 30px;
+        width: 2.5vw;
+        height: 2.5vw;
     }
     .chess-board .sub-container .content ul li .chess{
-        font-size: 30px;
+        font-size: 2.5vw;
     }
     .othello-board .sub-container .content .othello-points {
-        font-size: 150px;
+        font-size: 5vw;
     }
     .popup {
-        font-size: 64px;
-        padding: 16px 60px;
+        font-size: 2vw;
+        width: 10vw;
     }
 }
